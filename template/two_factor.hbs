@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Two Factor Authentication</title>
+</head>
+<body>
+    <p>{{message}}</p>
+
+    <h1>Two Factor Authentication</h1>
+
+    <form method="POST" action="/two_factor">
+        <input type="hidden" name="username" value="{{user}}">
+
+        <label>Verification Code:</label>
+        <input type="text" name="code">
+
+        <button type="submit">Verify</button>
+    </form>
+</body>
+</html>
+<a href="/logout">Logout</a>

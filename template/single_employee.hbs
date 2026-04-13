@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/public/style.css">
+
+<h1>Employee Details</h1>
+Name: {{employeeDetails.name}}<br>
+Phone: {{employeeDetails.phone}}<br>
+<a href="/edit/{{employeeDetails._id}}">Edit Details</a>
+
+<h2>Shifts</h2>
+<table>
+<thead>
+    <tr><th>Date</th><th>Start Time</th><th>End Time</th></tr>
+</thead>
+<tbody>
+    {{#each shifts}}
+    <tr>
+        <td>{{date}}</td>
+        {{#if startEarly}}
+            <td class="early-time">{{startTime}}</td>
+        {{else}}
+            <td>{{startTime}}</td>
+        {{/if}}
+        <td>{{endTime}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+<form action="/upload/{{employeeDetails._id}}" method="POST" enctype="multipart/form-data">
+    <input type="file" name="document" required>
+    <button type="submit">Upload PDF</button>
+</form>
+<h3>Documents</h3>
+
+<ul>
+    {{#each files}}
+        <li>
+            <a href="/download/{{../employeeDetails._id}}/{{this}}">
+                {{this}}
+            </a>
+        </li>
+    {{/each}}
+</ul>
+<a href="/logout">Logout</a>

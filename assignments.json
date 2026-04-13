@@ -1,0 +1,22 @@
+[
+    {
+        "employeeId": "E001",
+        "shiftId": "S001"
+    },
+    {
+        "employeeId": "E003",
+        "shiftId": "S004"
+    },
+    {
+        "employeeId": "E003",
+        "shiftId": "S007"
+    },
+    {
+        "employeeId": "E003",
+        "shiftId": "S008"
+    },
+    {
+        "employeeId": "E004",
+        "shiftId": "S009"
+    }
+]

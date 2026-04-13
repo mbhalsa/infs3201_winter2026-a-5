@@ -1,0 +1,9 @@
+<h1>Edit</h1>
+
+<form method="POST" action="/update-employee">
+    <input name="id" value="{{employeeDetails._id}}" type="hidden">
+    Name: <input name="name" value="{{employeeDetails.name}}"><br>
+    Phone: <input name="phone" value="{{employeeDetails.phone}}"><br>
+    <input type="submit" value="Save">
+</form>
+<a href="/logout">Logout</a>
